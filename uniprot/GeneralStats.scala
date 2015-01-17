@@ -13,10 +13,10 @@ object GeneralStats extends RDDCalc {
 
     val counts = lines.flatMap(line => { val cells = line.split("Ä"); (cells(1).split("").zipWithIndex) })
     val stat= counts.countByKey
-    val total = fo.foldLeft(0L)(_ + _._2)
+    val total = stat.foldLeft(0L)(_ + _._2)
     val relStat= stat.mapValues(v => v / 1.0 / total)
     val relStatSorted = new ListMap() ++ relStat.toList.sortBy(_._2)
-    val relStatFormatted = fo3.mapValues(relStatSorted => "%1.2f".format(x))
+    val relStatFormatted = relStatSorted.mapValues(x => "%1.2f".format(x))
     return relStatFormatted.mkString(";")
 
   }
