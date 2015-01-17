@@ -4,7 +4,7 @@
 import sys
 from pyspark import SparkContext
 
-sc = SparkContext("local")
+sc = SparkContext()
 
 if len(sys.argv) < 3:
     print("no input file specified")

@@ -11,7 +11,7 @@ public class WordCount
     public static void main(String[] args)
     {
         System.out.println(args[0]);
-        JavaSparkContext sc = new JavaSparkContext("local", "Simple App");
+        JavaSparkContext sc = new JavaSparkContext();
         JavaRDD<String> file = sc.textFile(args[0]);
         JavaRDD<String> words = file.flatMap(new FlatMapFunction<String, String>()
         {

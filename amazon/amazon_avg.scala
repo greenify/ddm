@@ -5,7 +5,7 @@ import org.apache.spark.SparkConf
 object AmazonAVG {
   def main(args: Array[String]) {
 
-    val sc = new SparkContext(new SparkConf().setAppName("Spark Count").setMaster("local"))
+    val sc = new SparkContext(new SparkConf().setAppName("Spark Count")))
 
     if(args.length < 1){
       println("No input file provided")
