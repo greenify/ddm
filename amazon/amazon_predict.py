@@ -36,9 +36,9 @@ numTest = test.count()
 print "Training: %d, validation: %d, test: %d" % (numTraining, numValidation, numTest)
 
 # train with different ranks
-ranks = [8, 12]
+ranks = [6, 18]
 lambdas = [0.1, 10.0]
-numIters = [10, 20]
+numIters = [5, 20]
 bestModel = None
 bestValidationRmse = float("inf")
 bestValidationAVG = float("inf")
