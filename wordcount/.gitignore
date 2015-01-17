@@ -1,0 +1,7 @@
+target
+project
+wc_classes
+dummy
+*.jar
+*.pyc
+out
