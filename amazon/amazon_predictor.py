@@ -15,7 +15,6 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 inputFile = sys.argv[1]
-trainingFile = sys.argv[1]
 
 print("input %s" % inputFile)
 
